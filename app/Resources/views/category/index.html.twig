@@ -1,19 +1,24 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {% include 'category/list.html.twig' %}
+            </div>
 
-    {% include 'category/list.html.twig' %}
-
-    <h1>Category List</h1>
-    <div>
-        <table>
-            {% for category in categories %}
-                <tr>
-                    <td><a href="{{ path('shop_category_show', { 'name': category.name }) }}">{{ category.name }}</a>
-                    </td>
-                </tr>
-            {% endfor %}
-        </table>
+            <div class="col-md-6">
+                <h1>Category List</h1>
+                <table>
+                    {% for category in categories %}
+                        <tr>
+                            <td>
+                                <a class="btn btn-default" href="{{ path('shop_category_show', { 'name': category.name }) }}">{{ category.name }}</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
     </div>
-
 {% endblock %}
