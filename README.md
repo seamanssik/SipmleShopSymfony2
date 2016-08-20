@@ -1,10 +1,10 @@
-**Symfony2 Simple Shop**
-
-DB name ( config ) - task_symfony_db
-
-Admin link                - **http://127.0.0.1:8000/admin/**
-Category link ( example ) - **http://127.0.0.1:8000/clothes**
-
-Admin credential ( sonata admin bundle )
-Login       - admin
-Password    - 123123
+**Symfony2 Simple Shop** <br />
+<br />
+DB name ( config ) - task_symfony_db <br />
+<br />
+Admin link                - **http://127.0.0.1:8000/admin/**<br />
+Category link ( example ) - **http://127.0.0.1:8000/clothes**<br />
+<br />
+Admin credential ( sonata admin bundle )<br />
+Login       - admin<br />
+Password    - 123123<br />
