@@ -5,6 +5,6 @@ shop_homepage:
             page: '\d+'
 
 shop_category_show:
-    path:     /{name}/
+    path:     /category/{name}
     defaults: { _controller: "ShopBundle:Category:show" }
     methods:  GET
