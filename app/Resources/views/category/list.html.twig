@@ -1,0 +1,14 @@
+<h1>All products</h1>
+<div>
+    <table>
+        {% for product in pagination %}
+            <tr>
+                <td>{{ product.name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="navigation">
+    {{ knp_pagination_render(pagination) }}
+</div>

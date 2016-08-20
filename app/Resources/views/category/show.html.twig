@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>{{ category.name }}</h1>
+    <div>
+        <table>
+            {% for category in categories %}
+                <tr>
+                    <td><a href="{{ path('shop_category_show', { 'name': category.name }) }}">{{ category.name }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <h1>Products</h1>
+    <div>
+        <table>
+            {% for product in products %}
+                <tr>
+                    <td>{{ product.name }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+# src/ShopBundle/Resources/config/doctrine/Product.orm.yml
+ShopBundle\Entity\Product:
+    type: entity
+    table: product
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+       name:
+            type: string
+            length: 255
+            unique: true
+    manyToMany:
+        categories:
+            targetEntity: Category
+            joinTable:
+                name: product_to_category
+                joinColumns:
+                    product_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    category_id:
+                        referencedColumnName: id

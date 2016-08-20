@@ -1,0 +1,10 @@
+shop_homepage:
+    path:     /
+    defaults: { _controller: "ShopBundle:Category:index" }
+    requirements:
+            page: '\d+'
+
+shop_category_show:
+    path:     /{name}/
+    defaults: { _controller: "ShopBundle:Category:show" }
+    methods:  GET
